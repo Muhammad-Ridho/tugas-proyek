@@ -47,7 +47,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nama_kelas }}</td>
                         <td>
-                            <a href="{{ route('siswa.kelas', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
+                            <a href="{{ route('siswa.kelas', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Details</a>
                         </td>
                     </tr>
                 @endforeach
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nis">NIS</label>
+                        <label for="nis">NISN</label>
                         <input type="text" id="nis" name="nis" onkeypress="return inputAngka(event)" class="form-control @error('nis') is-invalid @enderror">
                     </div>
                     <div class="form-group">

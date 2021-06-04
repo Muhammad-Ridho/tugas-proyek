@@ -1,9 +1,10 @@
 @extends('template_backend.home')
 @section('heading', 'Dashboard')
 @section('page')
-  <li class="breadcrumb-item active">Dashboard</li>
+  <li class="breadcrumb-item active">Dasboard </li>
 @endsection
 @section('content')
+    <!--
     <div class="col-md-12" id="load_content">
       <div class="card card-primary">
         <div class="card-body">
@@ -91,29 +92,16 @@
         </div>
       </div>
     </div>
-
-    <div class="col-md-6">
-      <div class="card card-warning" style="min-height: 385px;">
-        <div class="card-header">
-          <h3 class="card-title" style="color: white;">
-            Pengumuman
-          </h3>
-        </div>
-        <div class="card-body">
-          <div class="tab-content p-0">
-            {!! $pengumuman->isi !!}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
+    -->
+    
+    <div class="col-md-10">
       <div class="card card-info">
-        <div class="card-header">
-          <h3 class="card-title">
-            Keterangan :
+        <!-- <div class="card-header"> -->
+          <h3 class="card-title" style="min-height: 385px;">
+            MAN 1 PROBOLINGGO
           </h3>
-        </div>
+        <!-- </div> -->
+        <!--
         <div class="card-body">
           <div class="tab-content p-0">
             <table class="table" style="margin-top: -21px; margin-bottom: -10px;">
@@ -129,8 +117,24 @@
             </table>
           </div>
         </div>
+        -->
       </div>
     </div>
+    <div class="col-md-2">
+      <div class="card card-warning" style="min-height: 385px;">
+        <div class="card-header">
+          <h3 class="card-title" style="color: white;">
+            Pengumuman
+          </h3>
+        </div>
+        <div class="card-body">
+          <div class="tab-content p-0">
+            {!! $pengumuman->isi !!}
+          </div>
+        </div>
+      </div>
+    </div>
+    
 @endsection
 @section('script')
     <script>
