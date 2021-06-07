@@ -195,10 +195,10 @@ class JadwalController extends Controller
     public function cetak_pdf(Request $request)
     {
         $jadwal = Jadwal::OrderBy('hari_id', 'asc')->OrderBy('jam_mulai', 'asc')->where('kelas_id', $request->id)->get();
-        $kelas = Kelas::findorfail($request->id);
+        $kelas = Kelas::findOrFail($request->id);
         $pdf = PDF::loadView('jadwal-pdf', ['jadwal' => $jadwal, 'kelas' => $kelas]);
-        return $pdf->stream();
-        // return $pdf->stream('jadwal-pdf.pdf');
+        // return $pdf->stream();
+        return $pdf->stream('jadwal-pdf.pdf');
     }
 
     public function guru()
@@ -214,23 +214,6 @@ class JadwalController extends Controller
         $kelas = Kelas::findorfail($siswa->kelas_id);
         $jadwal = Jadwal::orderBy('hari_id')->OrderBy('jam_mulai')->where('kelas_id', $kelas->id)->get();
         return view('siswa.jadwal', compact('jadwal', 'kelas', 'siswa'));
-    }
-
-    public function export_excel()
-    {
-        return Excel::download(new JadwalExport, 'jadwal.xlsx');
-    }
-
-    public function import_excel(Request $request)
-    {
-        $this->validate($request, [
-            'file' => 'required|mimes:csv,xls,xlsx'
-        ]);
-        $file = $request->file('file');
-        $nama_file = rand() . $file->getClientOriginalName();
-        $file->move('file_jadwal', $nama_file);
-        Excel::import(new JadwalImport, public_path('/file_jadwal/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
     }
 
     public function deleteAll()

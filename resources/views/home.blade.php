@@ -97,9 +97,12 @@
     <div class="col-md-10">
       <div class="card card-info">
         <!-- <div class="card-header"> -->
-          <h3 class="card-title" style="min-height: 385px;">
-            MAN 1 PROBOLINGGO
-          </h3>
+          <h1 class="isi-dasboard" style="min-height: auto; text-align: center;" >
+            <img src="{{ asset('img/favicon.png') }}" alt="logo-dasboard" class="dasboard-logo" style="height: 300px; width: 300px;"> <br>
+            SELAMAT DATANG <br>
+            DI SISTEM AKADEMIK SEKOLAH BERBASIS WEB <br>
+            MAN 1 PROBOLINGGO - JAWA TIMUR
+          </h1>
         <!-- </div> -->
         <!--
         <div class="card-body">
@@ -121,7 +124,7 @@
       </div>
     </div>
     <div class="col-md-2">
-      <div class="card card-warning" style="min-height: 385px;">
+      <div class="card card-warning" style="min-height: 450px;">
         <div class="card-header">
           <h3 class="card-title" style="color: white;">
             Pengumuman

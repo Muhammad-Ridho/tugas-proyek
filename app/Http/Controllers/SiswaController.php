@@ -261,8 +261,8 @@ class SiswaController extends Controller
         $kelas = Kelas::findorfail($request->id);
 
         $pdf = PDF::loadView('siswa-pdf', ['siswa' => $siswa, 'kelas' => $kelas]);
-        return $pdf->stream();
-        // return $pdf->stream('jadwal-pdf.pdf');
+        // return $pdf->stream();
+        return $pdf->stream('jadwal-pdf.pdf');
     }
 
     public function kelas($id)
@@ -273,22 +273,6 @@ class SiswaController extends Controller
         return view('admin.siswa.show', compact('siswa', 'kelas'));
     }
 
-    public function export_excel()
-    {
-        return Excel::download(new SiswaExport, 'siswa.xlsx');
-    }
-
-    public function import_excel(Request $request)
-    {
-        $this->validate($request, [
-            'file' => 'required|mimes:csv,xls,xlsx'
-        ]);
-        $file = $request->file('file');
-        $nama_file = rand() . $file->getClientOriginalName();
-        $file->move('file_siswa', $nama_file);
-        Excel::import(new SiswaImport, public_path('/file_siswa/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
-    }
 
     public function deleteAll()
     {

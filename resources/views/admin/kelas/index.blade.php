@@ -271,7 +271,7 @@
         dataType:"JSON",
         url:"{{ url('/jadwal/view/json') }}",
         success:function(result){
-          // console.log(result);
+          console.log(result);
           var jadwal = "";
           if(result){
             $.each(result,function(index, val){

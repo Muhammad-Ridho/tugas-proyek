@@ -60,9 +60,9 @@
       </a>
     @endif
   </p>
-  <p class="mb-0">
+  <!-- <p class="mb-0">
     <a class="text-center" href="{{ route('register') }}">Buat Akun Baru</a>
-  </p>
+  </p> -->
 </div>
 @endsection
 @section('script')
