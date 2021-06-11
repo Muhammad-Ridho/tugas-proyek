@@ -327,6 +327,7 @@ class GuruController extends Controller
                 } else {
                     return redirect()->back()->with('warning', 'Maaf absensi tidak bisa dilakukan 2x!');
                 }
+                return redirect()->back();
             } else {
                 return redirect()->back()->with('error', 'Maaf id card ini bukan milik anda!');
             }
@@ -349,22 +350,7 @@ class GuruController extends Controller
         return view('admin.guru.kehadiran', compact('guru', 'absen'));
     }
 
-    public function export_excel()
-    {
-        return Excel::download(new GuruExport, 'guru.xlsx');
-    }
-
-    public function import_excel(Request $request)
-    {
-        $this->validate($request, [
-            'file' => 'required|mimes:csv,xls,xlsx'
-        ]);
-        $file = $request->file('file');
-        $nama_file = rand() . $file->getClientOriginalName();
-        $file->move('file_guru', $nama_file);
-        Excel::import(new GuruImport, public_path('/file_guru/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Guru Berhasil Diimport!');
-    }
+    
 
     public function deleteAll()
     {

@@ -151,6 +151,7 @@
           m = (m < 10) ? "0" + m : m;
           var jam = h + ":" + m;
           
+        /*
           if (hari == '0' || hari == '6') {
             $("#data-jadwal").html(
               `<tr>
@@ -233,7 +234,7 @@
             }
           }
         }, 60 * 1000);
-      });
+      }); */
       
       $("#Dashboard").addClass("active");
       $("#liDashboard").addClass("menu-open");

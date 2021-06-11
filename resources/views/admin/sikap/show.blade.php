@@ -69,14 +69,14 @@
                     <thead>
                         <tr>
                             <th rowspan="2" class="ctr">No.</th>
-                            <th rowspan="2">Nama Siswa</th>
-                            <th colspan="3" class="ctr">Nilai Sikap</th>
+                            <th colspan="2" class="ctr">Poin Pelanggaran</th>
+                            <th colspan="3" class="ctr">Keterangan</th>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th class="ctr">Teman</th>
                             <th class="ctr">Sendiri</th>
                             <th class="ctr">Guru</th>
-                        </tr>
+                        </tr> -->
                     </thead>
                     <tbody>
                             @foreach ($mapel as  $data)
@@ -87,9 +87,9 @@
                                         $array = array('mapel' => $data->id, 'siswa' => $siswa->id);
                                         $jsonData = json_encode($array);
                                     @endphp
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_1'] }}</td>
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_2'] }}</td>
-                                    <td class="ctr">{{ $data->cekSikap($jsonData)['sikap_3'] }}</td>
+                                    <td class="ctr">{{ $data->cekSikap($jsonData)['point_pelanggaran'] }}</td>
+                                     <td class="ctr">{{ $data->cekSikap($jsonData)['ketengan_pelanggaran'] }}</td>
+                                    <!--<td class="ctr">{{ $data->cekSikap($jsonData)['sikap_3'] }}</td> -->
                                 </tr>
                             @endforeach
                     </tbody>

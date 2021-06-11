@@ -31,7 +31,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->nama_siswa }}</td>
                     <td>{{ $data->no_induk }}</td>
-                    <td><a href="{{ route('sikap-show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Show Nilai Sikap</a></td>
+                    <td><a href="{{ route('sikap-show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Show Pelanggaran</a></td>
                   </tr>
                 @endforeach
               </tbody>

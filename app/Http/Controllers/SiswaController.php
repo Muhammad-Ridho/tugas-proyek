@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Siswa;
 use App\Kelas;
+use App\AbsenSiswa;
+use App\Absen;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
@@ -271,6 +273,27 @@ class SiswaController extends Controller
         $siswa = Siswa::where('kelas_id', $id)->OrderBy('nama_siswa', 'asc')->get();
         $kelas = Kelas::findorfail($id);
         return view('admin.siswa.show', compact('siswa', 'kelas'));
+    }
+
+    public function absen()
+    {
+        $absen = AbsenSiswa::where('tanggal', date('Y-m-d'))->get();
+        $kehadiran = Kehadiran::limit(4)->get();
+        return view('siswa.absen', compact('absen', 'kehadiran'));
+    }
+    
+    public function absensi()
+    {
+        $siswa = Siswa::all();
+        return view('admin.siswa.absen', compact('siswa'));
+    }
+
+    public function kehadiran($id)
+    {
+        $id = Crypt::decrypt($id);
+        $siswa = Siswa::findorfail($id);
+        $absen = AbsenSiswa::orderBy('tanggal', 'desc')->where('siswa_id', $id)->get();
+        return view('admin.siswa.kehadiran', compact('siswa', 'absen'));
     }
 
 

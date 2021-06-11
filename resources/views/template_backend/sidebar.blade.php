@@ -157,7 +157,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('guru.absensi') }}" class="nav-link" id="AbsensiGuru">
+                                <a href="{{ route('siswa.absensi') }}" class="nav-link" id="AbsensiGuru">
                                     <i class="fas fa-calendar-check nav-icon"></i>
                                     <p>Absensi Siswa</p>
                                 </a>
@@ -169,7 +169,7 @@
                         <a href="#" class="nav-link" id="Nilai">
                             <i class="nav-icon fas fa-file-signature"></i>
                             <p>
-                                Nilai
+                                Penginputan
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
@@ -178,12 +178,6 @@
                                 <a href="{{ route('ulangan-kelas') }}" class="nav-link" id="Ulangan">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Nilai Ulangan</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('sikap-kelas') }}" class="nav-link" id="Sikap">
-                                    <i class="fas fa-file-alt nav-icon"></i>
-                                    <p>Nilai Sikap</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -196,6 +190,12 @@
                                 <a href="{{ route('predikat') }}" class="nav-link" id="Deskripsi">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Deskripsi Predikat</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('sikap-kelas') }}" class="nav-link" id="Sikap">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Pelanggaran</p>
                                 </a>
                             </li>
                         </ul>
