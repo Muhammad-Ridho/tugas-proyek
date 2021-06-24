@@ -13,7 +13,7 @@
                     <tr>
                         <td>Nama Guru</td>
                         <td>:</td>
-                        <td>{{ $guru->nama_guru }}</td>
+                        <td>{{ $siswa->nama_guru }}</td>
                     </tr>
                     <tr>
                         <td>Mata Pelajaran</td>

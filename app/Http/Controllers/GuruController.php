@@ -263,6 +263,12 @@ class GuruController extends Controller
         $kehadiran = Kehadiran::limit(4)->get();
         return view('guru.absen', compact('absen', 'kehadiran'));
     }
+    public function absenSiswa()
+    {
+        $absen = Absen::where('tanggal', date('Y-m-d'))->get();
+        $kehadiran = Kehadiran::limit(4)->get();
+        return view('siswa.absen', compact('absen', 'kehadiran'));
+    }
 
     public function simpan(Request $request)
     {

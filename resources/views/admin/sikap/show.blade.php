@@ -1,14 +1,14 @@
 @extends('template_backend.home')
-@section('heading', 'Show Nilai Sikap')
+@section('heading', 'Show Pelanggaran')
 @section('page')
-  <li class="breadcrumb-item active">Show Nilai Sikap</li>
+  <li class="breadcrumb-item active">Show Pelanggaran</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
     <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Show Nilai Sikap</h3>
+        <h3 class="card-title">Show Pelanggaran</h3>
       </div>
       <!-- /.card-header -->
         <div class="card-body">
@@ -69,7 +69,7 @@
                     <thead>
                         <tr>
                             <th rowspan="2" class="ctr">No.</th>
-                            <th colspan="2" class="ctr">Poin Pelanggaran</th>
+                            <th colspan="2" class="ctr">Jenis Pelanggaran</th>
                             <th colspan="3" class="ctr">Keterangan</th>
                         </tr>
                         <!-- <tr>

@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Absen Harian Guru')
+@section('heading', 'Absen Harian Siswa')
 @section('page')
-  <li class="breadcrumb-item active">Absen Harian guru</li>
+  <li class="breadcrumb-item active">Absen Harian Siswa</li>
 @endsection
 @section('content')
 @php

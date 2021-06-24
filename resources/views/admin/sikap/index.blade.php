@@ -1,7 +1,7 @@
 @extends('template_backend.home')
-@section('heading', 'Nilai Sikap')
+@section('heading', 'Data Pelanggaran')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('sikap-kelas') }}">Nilai Sikap</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('sikap-kelas') }}">Data Pelanggaran</a></li>
   <li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
 @endsection
 @section('content')

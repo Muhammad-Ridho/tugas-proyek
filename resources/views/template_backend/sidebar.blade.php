@@ -215,11 +215,28 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('absen.harian') }}" class="nav-link" id="AbsenGuru">
+                    <li class="nav-item has-treeview" id="liNilai">
+                        <a href="#" class="nav-link" id="Nilai">
                             <i class="fas fa-calendar-check nav-icon"></i>
-                            <p>Absen</p>
+                            <p>
+                                Absensi
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
                         </a>
+                        <ul class="nav nav-treeview ml-4">
+                            <li class="nav-item">
+                                <a href="{{ route('absen.harian') }}" class="nav-link" id="Ulangan">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Absen Guru</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('absen.harian') }}" class="nav-link" id="Rapot">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Absen siswa</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('jadwal.guru') }}" class="nav-link" id="JadwalGuru">
@@ -266,6 +283,12 @@
                                     <p>Deskripsi Predikat</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('sikap.index') }}" class="nav-link" id="DesGuru">
+                                    <i class="fas fa-file-alt nav-icon"></i>
+                                    <p>Pelanggaran Siswa</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -292,7 +315,7 @@
                     <li class="nav-item">
                         <a href="{{ route('sikap.siswa') }}" class="nav-link" id="SikapSiswa">
                             <i class="fas fa-file-alt nav-icon"></i>
-                            <p>Sikap</p>
+                            <p>Pelanggaran</p>
                         </a>
                     </li>
                     <li class="nav-item">
